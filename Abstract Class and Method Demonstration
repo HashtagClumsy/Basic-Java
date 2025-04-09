@@ -1,0 +1,27 @@
+abstract class vehicle{ //as we have abstract method make it abstract class 
+	abstract void drive();//as it is a declared method make it abstract
+	void applyBreak(){
+		System.out.println("applyBreak");
+	}
+}
+class car extends vehicle{ //override abstract method
+	void drive() {
+		System.out.println("DriveCar");
+	}
+	void changeGear() {
+		System.out.println("ChangeGear");
+	}
+}
+public class AbstractDemo {
+
+	public static void main(String[] args) {
+		//vehicle v = new vehicle();//error cannot create object for abstract class
+		vehicle v = new car();//can create by referring to subclass
+		v.drive();
+		v.applyBreak();
+		//v.changeGear();error only possible for abstract methods
+		car c = new car();
+		c.changeGear();
+	}
+
+}
