@@ -1,0 +1,64 @@
+/*Create a class Customer with the fields custId, custName and custAddress. Create a 
+method display() which displays the Customer details. 
+Create a class Account with the fields acctId, acctType, Customer and acctBalance. 
+Create a method display() which displays Account Details 
+Create a main class “AccountTest” to test the above classes 
+Note: Use constructors to set the values to the fields of the classes*/
+
+class Customer {
+
+	int custId;
+	String custName;
+	String custAddress;
+
+	Customer(int custId, String custName, String custAddress) {
+		this.custId = custId;
+		this.custName = custName;
+		this.custAddress = custAddress;
+		
+	}
+
+	void Custdisplay() {
+		System.out.println("Customer Number: " + custId);
+		System.out.println("Customer Name: " + custName);
+		System.out.println("Customer Address: " + custAddress);
+		System.out.println("_______________________________");
+
+	}
+}
+
+class AccountTwo {
+
+	int acctId;
+	String acctType;
+	String Customer;
+	int acctBalance;
+
+	AccountTwo(int acctId, String acctType, String Customer, int acctBalance) {
+		this.acctId = acctId;
+		this.acctType = acctType;
+		this.Customer = Customer;
+		this.acctBalance = acctBalance;
+		
+	}
+
+	void Acctdisplay() {
+		System.out.println("Account Number: " + acctId);
+		System.out.println("Account Type: " + acctType);
+		System.out.println("Customer: " + Customer);
+		System.out.println("Account Balance: " + acctBalance);
+		System.out.println("_______________________________");
+
+	}
+}
+
+public class AccountTest {
+
+	public static void main(String[] args) {
+		Customer c1 = new Customer(1, "Tej", "1200 Dallas dr");
+		c1.Custdisplay();
+		AccountTwo a1 = new AccountTwo(1, "salary", "Tej", 1200);
+		a1.Acctdisplay();
+	}
+
+}
